@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+      "psioniq.psi-header",
+      "ms-vscode.powershell",
+      "streetsidesoftware.code-spell-checker",
+      "editorconfig.editorconfig"      
+    ]
+}
