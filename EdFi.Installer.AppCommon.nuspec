@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>EdFi.Installer.AppCommon</id>
+    <version>1.0.0</version>
+    <title>Application installer modules</title>
+    <authors>Ed-Fi Alliance</authors>
+    <projectUrl>https://github.com/Ed-Fi-Alliance/Ed-Fi-ODS-Deploy</projectUrl>
+    <copyright>Copyright © 2020, Ed-Fi Alliance, LLC and contributors.</copyright>
+    <summary>Helper modules and functions for configuring and installing Ed-Fi applications</summary>
+    <description>Helper modules and functions for configuring and installing Ed-Fi applications</description>
+  </metadata>
+  <files>
+    <file src="**/*.psm1" target="" />
+    <file src="**/*.ps1" target="" exclude="build-package.ps1" />
+  </files>
+</package>
