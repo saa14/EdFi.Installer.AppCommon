@@ -1,0 +1,57 @@
+# Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
+[Bb]in
+csx/
+rcf/
+[Oo]bj
+publish/
+
+#User-specific files
+*.suo
+*.csproj.user
+*.ccproj.user
+*.sln.DotSettings.user
+*.pubxml.user
+*.dbmdl
+
+#Visual Studio files
+.vs/
+
+#NCrunch
+_NCrunch*
+*.ncrunchsolution.user
+*.ncrunchproject
+*.ncrunchsolution
+
+#Vim backup files
+*~
+
+#MS Office Backup Files
+~*
+
+#Resharper files
+_ReSharper.*
+*.resharper
+*.resharper.user
+
+#Others
+*.cache
+*.orig
+*.original
+*.log
+
+#Packages
+packages/
+/*.dll
+/*.pdb
+/*.XML
+*.nupkg
+
+#nDevConfig
+.workspaceInitialized
+nDevConfig/
+
+credentials-*.xml
+
+#lib directory
+libs/
+libs.codegen/
