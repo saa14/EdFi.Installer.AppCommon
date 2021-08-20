@@ -23,6 +23,4 @@ object AppCommonProject : Project({
 
     buildType(_self.buildTypes.BuildAppCommon)
     buildType(_self.buildTypes.ReleaseAppCommon)
-
-    vcsRoot(_self.vcsRoots.EdFiAppCommon)
 })
