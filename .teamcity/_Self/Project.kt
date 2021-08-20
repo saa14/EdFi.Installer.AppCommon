@@ -19,7 +19,6 @@ object AppCommonProject : Project({
         """.trimIndent())
         param("teamcity.ui.settings.readOnly","true")
         param("appCommon.version", "2.0.0")
-        param("project.name", "EdFi.Installer.AppCommon")
         param("version.preReleaseLabel", "pre")
     }
 

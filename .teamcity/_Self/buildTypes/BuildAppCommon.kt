@@ -24,7 +24,6 @@ object BuildAppCommon : BuildType ({
 
     params {
         param("github.organization", "Ed-Fi-Alliance-OSS")
-        param("project.directory", """%project.name%""")
         param("env.VSS_NUGET_EXTERNAL_FEED_ENDPOINTS", """{"endpointCredentials": [{"endpoint": "%azureArtifacts.feed.nuget%","username": "%azureArtifacts.edFiBuildAgent.userName%","password": "%azureArtifacts.edFiBuildAgent.accessToken%"}]}""")
         param("project.shouldPublishPreRelease", "true")
     }
@@ -34,7 +33,6 @@ object BuildAppCommon : BuildType ({
             name = "Build Pre-release and release, publish pre-release package"
             id = "PackageAndPublishInstallerLibrary_PackPreRelease"
             formatStderrAsError = true
-            workingDir = "%project.directory%"
             scriptMode = script {
                 content = """
                     ${'$'}parameters = @{
