@@ -38,3 +38,5 @@ $parameters = @{
     ToolsPath = "$PSScriptRoot/../../tools"
 }
 Invoke-CreatePackage @parameters -Verbose:$verbose
+
+#Test Trigger Comment added
