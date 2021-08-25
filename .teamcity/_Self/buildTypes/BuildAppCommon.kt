@@ -8,8 +8,8 @@ package _self.buildTypes
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.powerShell
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.swabra
+import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.VcsTrigger
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
-import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
 
 object BuildAppCommon : BuildType ({
     name = "Build Ed-Fi Installer AppCommon"
@@ -26,6 +26,17 @@ object BuildAppCommon : BuildType ({
         param("github.organization", "Ed-Fi-Alliance-OSS")
         param("env.VSS_NUGET_EXTERNAL_FEED_ENDPOINTS", """{"endpointCredentials": [{"endpoint": "%azureArtifacts.feed.nuget%","username": "%azureArtifacts.edFiBuildAgent.userName%","password": "%azureArtifacts.edFiBuildAgent.accessToken%"}]}""")
         param("project.shouldPublishPreRelease", "true")
+    }
+
+    triggers {
+        vcs {
+            id ="vcsTrigger"
+            quietPeriodMode = VcsTrigger.QuietPeriodMode.USE_CUSTOM
+            quietPeriod = 120
+            branchFilter = """
+                +:main
+            """.trimIndent()
+        }
     }
 
     steps {
